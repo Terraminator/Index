@@ -13,7 +13,7 @@
 Create an index of the web with python
 
 ### Setup
-You just have to install a Python version >= 3 and change self.urls to your start urls than just run python main.py this will create a sqlite3 db, which contains the urls that has been crawled.
+You just have to install a Python version >= 3 and change self.urls to your start urls than just run python main.py this will create a sqlite3 db, which contains the urls that has been crawled. To get your index you can run python read_index.py where you can enter your sql commands.
 
 ### Ascii Art  
 The Ascii Art is made with: https://patorjk.com/software/taag/
