@@ -47,7 +47,7 @@ class IndexSpider:
 			
 	def parse(self, url):
 		self.get_links(url)
-		if "http" in url:
+		if "www" in url:
 			self.man.write(url)
 
 if __name__ == "__main__":
