@@ -10,23 +10,22 @@ class man:
 	def create_db(self):
 		conn = sqlite3.connect("index.db")
 		c = conn.cursor()
-		sql = "CREATE TABLE urls(Url TEXT)"
+		sql = "CREATE TABLE urls(Url TEXT, Sheme TEXT)"
 		c.execute(sql)
 		conn.commit()
 		conn.close()
 		
-	def write(self, url):
+	def write(self, url, sheme):
 		conn = sqlite3.connect("index.db")
 		c = conn.cursor()
-		sql = "INSERT INTO urls(Url) VALUES ( '" + str(url) + "')"
+		sql = "INSERT INTO urls(Url, Sheme) VALUES ('" + str(url) + "', '" + str(sheme) + "')"
 		c.execute(sql)
 		conn.commit()
 		conn.close()
 		
-	def read(self, search):
+	def read(self, sql):
 		conn = sqlite3.connect("index.db")
 		c = conn.cursor()
-		sql = "SELECT * from urls where Url LIKE " + str(search)
 		c.execute(sql)
 		items = c.fetchall()
 		conn.close()

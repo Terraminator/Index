@@ -10,7 +10,10 @@ class IndexSpider:
 	def __init__(self):
 		self.man = man_db.man()
 		self.urls = [
-			'https://www.wikipedia.com'
+			#'https://www.wikipedia.com',
+			#'https://en.wikipedia.com/wiki/Wikipedia:Contents/A%E2%80%93Z_index'
+			#'https://www.google.com',
+			'https://www.perspektiven-finden.com/unternehmen',
 			]
 		self.start_requests()
 	
@@ -45,7 +48,7 @@ class IndexSpider:
 	def parse(self, url):
 		self.get_links(url)
 		if "www" in url:
-			self.man.write(url)
+			self.man.write(url, url.split("//")[0].replace(':', ''))
 
 if __name__ == "__main__":
 	indexspider = IndexSpider()
