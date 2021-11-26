@@ -7,7 +7,7 @@ def main():
 		print("To create an index you first have to run main.py!")
 		exit(0)
 	man = man_db.man()
-	print("This is a db manager! Please enter your command. For Example: SELECT * from urls where Url LIKE https://www.wikipedia.com AND Sheme LIKE https")
+	print("This is a db manager! Please enter your command. For Example: SELECT * from urls where Url=https://www.wikipedia.com AND Sheme=https")
 	while True:
 		search = input("Enter search: ")
 		try:
