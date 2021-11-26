@@ -11,9 +11,6 @@ class IndexSpider:
 		self.man = man_db.man()
 		self.urls = [
 			'https://www.wikipedia.com',
-			#'https://en.wikipedia.com/wiki/Wikipedia:Contents/A%E2%80%93Z_index'
-			#'https://www.google.com',
-			#'https://www.perspektiven-finden.com/unternehmen.com',
 			]
 		self.start_requests()
 	
